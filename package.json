@@ -1,0 +1,36 @@
+{
+  "name": "quickdetect",
+  "version": "0.1.0",
+  "description": "A small lib (more of a snippet) that will detect the user's browser quickly.",
+  "main": "quickdetect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://paul-hpa@bitbucket.org/paul-hpa/quickdetect.git"
+  },
+  "keywords": [
+    "quickdetect",
+    "IE",
+    "moz",
+    "chrome",
+    "safari",
+    "js",
+    "quick",
+    "browser"
+  ],
+  "author": "Hidden Prairie",
+  "license": "Unlicense",
+  "homepage": "https://bitbucket.org/paul-hpa/quickdetect#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "copy-webpack-plugin": "^4.4.2",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^2.0.9"
+  }
+}

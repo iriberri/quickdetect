@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>QuickDetect</title>
+    <script src="index.js"></script>    
+  </head>
+  <body>
+  	
+    <div id="QDlogo"></div>
+
+  	<h1>QuickDetect</h1>
+    <p>Current QD Status: <strong>ALPHA</strong></p>
+    <p>QD is a vanilla JS library that offers a small API for determining browser characteristics (mostly using feature-detection). Inspired/copied largely from the Stack Overflow community, I was inspired to take the SO answers and create QD from my experiences with front-end development and figuring out what I actually use versus what's a bell-and-whistle that I don't really need (QD.isSquare is mostly just for fun). QD shouldn't conflict with third party libraries and is Unlicensed.</p>
+
+    <h2>Your browser:</h2>
+    <div id="QDtarget"></div>
+
+    <h2>Compatibility</h2>
+    <p>As of 2018 I work in a world where clients do not care about pre-IE8 support for their executions (or even pre IE10-ish really); QD reflects that and is best used in modern browsers on projects that don't expect or need a lot of backwards compatibility. That said, QD has been directly tested as compatible on:</p>
+    <ul>
+      <li>Safari 11.0.3</li>
+      <li>Chrome 64</li>
+      <li>Firefox 58.0.2</li>
+      <li>IE </li>
+      <li>Opera 51</li>
+    </ul>
+    <p>Theoretically QD is compatible on:
+    <ul>
+      <li>Safari 3.0+</li>
+      <li>Chrome 1+</li>
+      <li>Firefox 1.0+</li>
+      <li>IE 6 - 11</li>
+      <li>Edge 20+</li>
+      <li>Opera 8+</li>
+    </ul>
+    <p>Tests have taken place on both Mac and PC hardware.</p>
+
+    <h2>Installation</h2>
+    <p>A few options (pick one):</p>
+    <ul>
+      <li>Install via npm: <code></code></li>
+      <li>Add the dist/quickdetect.js file to the head of your document (e.g.: <code></code>).</li>
+      <li>Copy and paste the code in dist/quickdetect.js into your code where you need.</li>
+      <li>Use the CDN in the head of your document: <code></code>(e.g.: <code></code>)</li>
+    </ul>
+
+
+    <h2>API</h2>
+    <code>
+    	 <ul>
+
+          <li><strong>QD.dev</strong>: False by default, setting the dev mode to 'true' (e.g. "QD.dev.mode = true") will console log any QD function you invoke. Remember to remove this before moving to production.</li>
+
+          <li><strong>QD.browser</strong>: Returns a string showing your browser marketname. Current possibilities are: "Safari", "Chrome", "Opera", "Firefox", "IE", "Edge", or "Unspecified".</li>
+
+          <li><strong>QD.ori</strong>: Returns a string describing your current aspect ratio / orientation. Possibilities are: "Landscape", "Portrait", or "Square".</li>
+
+      		<li><strong>QD.IE.isBrowser</strong>: Returns true/false about whether the user is on an IE browser (IE 8+).</li>
+
+          <li><strong>QD.edge.isBrowser</strong>: Returns true/false about whether the user is on an Edge browser.</li>        
+
+      		<li><strong>QD.moz.isBrowser</strong>: Returns true/false about whether the user is on a Mozilla/Firefox browser.</li>
+
+          <li><strong>QD.chrome.isBrowser</strong>: Returns true/false about whether the user is on a Chrome browser.</li>
+
+          <li><strong>QD.safari.isBrowser</strong>: Returns true/false about whether the user is on a Safari browser.</li>
+
+          <li><strong>QD.opera.isBrowser</strong>: Returns true/false about whether the user is on an Opera browser.</li>
+
+          <li><strong>QD.isPortrait</strong>: Returns true/false about whether the user's aspect ratio is in portrait mode.</li>
+
+          <li><strong>QD.isLandscape</strong>: Returns true/false about whether the user's aspect ratio is in landscape mode.</li>
+
+          <li><strong>QD.isSquare</strong>: Returns true/false about whether the user has an equal aspect ratio (for some reason).</li>
+        
+        </ul>
+        
+        <p>Below are user-agent dependent functions... I recommmend designing responsively so as to mostly ignore the concerns of these, but these functions can still be useful for QA.</p>
+        
+        <ul>
+          <li><strong>QD.isMobile</strong>: Returns true/false about whether the user is on a non-desktop browser.</li>
+
+          <li><strong>QD.mobDevice</strong>: Returns a string describing your current mobile device type. Current possibilities are: "iPhone, "iPod", "iPad", "Android", "webOS", "BlackBerry", "IEMobile", "Opera Mini", and "Desktop".</li>
+
+          <li><strong>QD.platform</strong>: Returns a string describing your current platform. Current possibilities are: "".</li>
+
+    	 </ul>
+    </code>
+    <script>
+
+      var qdInfo = document.createElement('div');
+      var qdTarget = document.getElementById('QDtarget');
+      qdInfo.id = "qdInfo";
+
+      var qdbr = QD.browser();
+      var qdori = QD.ori();
+      var qdMobile = QD.isMobile == true ? "You are running on a mobile device." : "You are running on a desktop device.";
+
+      qdInfo.innerHTML = "Your brower is " + qdbr + " and you're starting off in " + qdori + " mode." + " "+qdMobile;
+
+      qdTarget.appendChild(qdInfo);
+
+      QD.dev.mode = true;
+
+      // QD.platform();
+      // QD.version();
+      // QD.mobDevice();
+      // console.log(QD.browser());
+      // QD.browser();
+      // QD.IE.isBrowser;
+      // QD.edge.isBrowser;
+      // QD.moz.isBrowser;
+      // QD.chrome.isBrowser;
+      // QD.safari.isBrowser;
+      // QD.opera.isBrowser;
+      // QD.isMobile();
+      // QD.isPortrait();
+      // QD.isLandscape();
+      // QD.isSquare();
+      // QD.ori();
+
+    </script>
+  </body>
+</html>
