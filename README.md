@@ -40,7 +40,7 @@ A few options (pick one):
 *   Install via npm: `npm i quickdetect`
 *   Add the dist/qd.min.js OR dist/qdp.min.js file to the head of your document (e.g.: `<head><lots of other tags><script src="qdp.min.js"></script></head>`).
 *   Copy and paste the code in dist/qd.min.js or dist/qdp.min.js into your code where you need.
-*   Use the CDN in the head of your document: (e.g.: `<head><lots of other tags><script src="https://cdn.jsdelivr.net/npm/quickdetect@0.2.0/file"></script></head>`)
+*   Use the CDN in the head of your document: (e.g.: `<head><lots of other tags><script src="https://cdn.jsdelivr.net/npm/quickdetect@0.2.0/dist/qdp.min.js"></script></head>`)
 
 ## API
 
