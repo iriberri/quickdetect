@@ -3,7 +3,8 @@
 	// Many thanks to the Stack Overflow community for this thread: https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser, particularly Rob W, Will Squire, and Pilau, as this lib is mostly just a convenience abstraction of their answers. 
 
 	const log = (msg) => {
-		console.log("%c QD DEV MESSAGE: " + msg, "background: #ddd; color:blue");
+		let browserColor = QD.moz.result || QD.chrome.result ? true : false;
+		!!browserColor ? console.log("%c QD DEV MESSAGE: " + msg, "background: #ddd; color:blue") : console.log("QD DEV MESSAGE: " + msg);
 	}
 
 	QD.dev = {

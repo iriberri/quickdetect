@@ -1,7 +1,7 @@
 {
   "name": "quickdetect",
   "version": "0.1.0",
-  "description": "A small lib (more of a snippet) that will detect the user's browser quickly.",
+  "description": "A small utility lib that will detect common browser features quickly.",
   "main": "quickdetect.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,7 +23,7 @@
   ],
   "author": "Hidden Prairie",
   "license": "Unlicense",
-  "homepage": "https://bitbucket.org/paul-hpa/quickdetect#readme",
+  "homepage": "https://github.com/paul-HPA/quickdetect#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.3",
