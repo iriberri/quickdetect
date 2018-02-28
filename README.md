@@ -1,5 +1,9 @@
 # QuickDetect
 
+<p align="center">
+	<img src="./assets/qd_mascot.png">
+</p>
+
 Current QD Status: **BETA**
 
 QD is a vanilla JS library that offers a small API for determining browser characteristics (using feature-detection where possible). 
@@ -27,7 +31,7 @@ Theoretically QD is compatible on:
 *   Edge 20+
 *   Opera 8+
 
-Tests have taken place on both Mac and PC hardware but don't take my word for it, this is still beta.
+Tests have taken place on both Mac and PC hardware but don't take my word for it, this is still in beta.
 
 ## Installation
 
