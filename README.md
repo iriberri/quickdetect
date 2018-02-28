@@ -1,7 +1,7 @@
 # QuickDetect
 
 <p align="center">
-	<img src="./assets/qd_mascot.png">
+	<img src="https://github.com/paul-HPA/quickdetect/assets/qd_mascot.png">
 </p>
 
 Current QD Status: **BETA**
