@@ -1,6 +1,6 @@
 {
   "name": "quickdetect",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A small utility lib that will detect common browser features quickly.",
   "main": "quickdetect.js",
   "scripts": {
