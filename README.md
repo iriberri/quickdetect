@@ -42,20 +42,20 @@ Tests have taken place on both Mac and PC hardware but don't take my word for it
 A few options (**pick one**):
 
 *   Install via npm: 
-```
+```bash
 npm i quickdetect 
 ```
 
 then 
 
-```
+```javascript
 const qd = require('quickdetect'); 
 ```
 
 ***NOTE***: npm gives you both versions but your default is the non-logging production script, qdp.min.js. 
 
 *   Add the dist/qd.min.js OR dist/qdp.min.js file to the head of your document, e.g.: 
-```
+```html
 <head>
   <lots of other tags>
   <script src="path/to/qdp.min.js"></script>
@@ -63,7 +63,7 @@ const qd = require('quickdetect');
 ```
 *   Copy and paste the code in dist/qd.min.js or dist/qdp.min.js into your code where you need.
 *   Use the CDN in the head of your document, e.g.: 
-```
+```html
 <head>
   <lots of other tags>
   <script src="https://cdn.jsdelivr.net/npm/quickdetect@0.3.5/dist/qdp.min.js"></script>
@@ -74,17 +74,17 @@ const qd = require('quickdetect');
 
 
 *   **QD.dev.mode**: False by default, setting the dev mode to 'true' will console log any QD function you invoke. Remember to remove this before moving to production. The dist/qdp.min.js file is minified/uglified and does NOT include this functionality either way so it's best for production. 
-```
+```javascript
 QD.dev.mode = true;
 QD.chrome.isBrowser(); =>  // In console: "QD DEV MESSAGE: Browser is Chrome".  Actual data returned:  true
 ```
 *   **QD.browser**: Returns a string showing your browser marketname. Current possibilities are: "Safari", "Chrome", "Opera", "Firefox", "IE", "Edge", or "Unspecified".
-```
+```javascript
 QD.browser(); =>  // Chrome
 ```
 *   **QD.ori**: Returns a string describing your current aspect ratio / orientation. Current possibilities are: "Landscape", "Portrait", or "Square".QD.ori(); =>  // Landscape
 *   **QD.IE.isBrowser**: Returns true/false about whether the user is on an IE browser (IE 9+).
-```
+```javascript
 QD.IE.isBrowser(); =>  // false
 ```
 (You get the idea; not including samples of the rest)
@@ -101,10 +101,10 @@ Below are user-agent dependent functions... I recommend designing responsively s
 *   **QD.isMobile**: Returns true/false about whether the user is on a non-desktop browser (laptops are still desktops in this case).
 * 	**QD.mobDevice**: Returns a string describing your current mobile device type. Current possibilities are: "iPhone, "iPod", "iPad", "Android", "webOS", "BlackBerry", "IEMobile", "Opera Mini"... and "Desktop" if, for some reason, you've forgotten.
 * 	**QD.platform**: Returns a string describing your current OS platform. I haven't found a 'master list' of all the possiblities here.
-```
+```javascript
 QD.platform(); => // MacIntel
 ```
 * 	**QD.version**: Returns a string describing the version of the browser you're using (long user-agent string).
-```
+```javascript
 QD.version(); => // 5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36
 ```
