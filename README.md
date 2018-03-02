@@ -51,19 +51,11 @@ A few options (pick one):
 ## API / Usage
 
 
-*   `QD.dev.mode`: False by default, setting the dev mode to 'true' will console log any QD function you invoke. Remember to remove this before moving to production. The dist/qdp.min.js file is minified/uglified and does NOT include this functionality either way so it's best for production. <pre>`<script>
-  QD.dev.mode = true;
-  QD.chrome.isBrowser(); =>  // In console: "QD DEV MESSAGE: Browser is Chrome".  Actual data returned:  true
-</script>`</pre>
-*   `QD.browser`: Returns a string showing your browser marketname. Current possibilities are: "Safari", "Chrome", "Opera", "Firefox", "IE", "Edge", or "Unspecified".<pre>`<script>
-  QD.browser(); =>  // Chrome
-</script>`</pre>
-*   `QD.ori`: Returns a string describing your current aspect ratio / orientation. Current possibilities are: "Landscape", "Portrait", or "Square".<pre>`<script>
-  QD.ori(); =>  // Landscape
-</script>`</pre>
-*   `QD.IE.isBrowser`: Returns true/false about whether the user is on an IE browser (IE 9+).<pre>`<script>
-  QD.IE.isBrowser(); =>  // false
-</script>`</pre>
+*   `QD.dev.mode`: False by default, setting the dev mode to 'true' will console log any QD function you invoke. Remember to remove this before moving to production. The dist/qdp.min.js file is minified/uglified and does NOT include this functionality either way so it's best for production. <pre>`QD.dev.mode = true;
+  QD.chrome.isBrowser(); =>  // In console: "QD DEV MESSAGE: Browser is Chrome".  Actual data returned:  true`</pre>
+*   `QD.browser`: Returns a string showing your browser marketname. Current possibilities are: "Safari", "Chrome", "Opera", "Firefox", "IE", "Edge", or "Unspecified".<pre>`QD.browser(); =>  // Chrome`</pre>
+*   `QD.ori`: Returns a string describing your current aspect ratio / orientation. Current possibilities are: "Landscape", "Portrait", or "Square".<pre>`QD.ori(); =>  // Landscape`</pre>
+*   `QD.IE.isBrowser`: Returns true/false about whether the user is on an IE browser (IE 9+).<pre>`QD.IE.isBrowser(); =>  // false`</pre>
 
 (You get the idea; not including samples of the rest)
 *   `QD.edge.isBrowser`: Returns true/false about whether the user is on an Edge browser.
@@ -78,9 +70,5 @@ A few options (pick one):
 Below are user-agent dependent functions... I recommend designing responsively so as to mostly ignore the concerns of these, but these functions can still be useful for QA. 
 *   `QD.isMobile`: Returns true/false about whether the user is on a non-desktop browser (laptops are still desktops in this case).
 * 	`QD.mobDevice`: Returns a string describing your current mobile device type. Current possibilities are: "iPhone, "iPod", "iPad", "Android", "webOS", "BlackBerry", "IEMobile", "Opera Mini"... and "Desktop" if, for some reason, you've forgotten.
-* 	`QD.platform`: Returns a string describing your current OS platform. I haven't found a 'master list' of all the possiblities here.<pre>`<script>
-QD.platform(); => // MacIntel
-</script>`</pre>
-* 	`QD.version`: Returns a string describing the version of the browser you're using (long user-agent string).<pre>`<script>
-QD.version(); => // 5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36
-</script>`</pre>
+* 	`QD.platform`: Returns a string describing your current OS platform. I haven't found a 'master list' of all the possiblities here.<pre>`QD.platform(); => // MacIntel`</pre>
+* 	`QD.version`: Returns a string describing the version of the browser you're using (long user-agent string).<pre>`QD.version(); => // 5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36`</pre>
