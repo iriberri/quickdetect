@@ -1,11 +1,11 @@
 {
   "name": "quickdetect",
-  "version": "0.2.1",
-  "description": "A small utility lib that will detect common browser features quickly.",
+  "version": "0.3.0",
+  "description": "A small js utility lib that will detect common browser features quickly.",
   "main": "quickdetect.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "test": "jest",
+    "build": "jest && webpack"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,8 @@
     "babel-loader": "^7.1.3",
     "babel-preset-es2015": "^6.24.1",
     "clean-webpack-plugin": "^0.1.18",
-    "webpack": "^4.0.0",
+    "jest": "^22.4.2",
+    "webpack": "^4.0.1",
     "webpack-cli": "^2.0.9"
   }
 }

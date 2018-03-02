@@ -37,18 +37,35 @@ Tests have taken place on both Mac and PC hardware but don't take my word for it
 
 A few options (pick one):
 
-*   Install via npm: `npm i quickdetect`
-*   Add the dist/qd.min.js OR dist/qdp.min.js file to the head of your document (e.g.: `<head><lots of other tags><script src="qdp.min.js"></script></head>`).
+*   Install via npm: <pre>npm i quickdetect</pre>
+*   Add the dist/qd.min.js OR dist/qdp.min.js file to the head of your document, e.g.: <pre>`<head>
+<lots of other tags>
+<script src="path/to/qdp.min.js"></script>
+</head>`</pre>
 *   Copy and paste the code in dist/qd.min.js or dist/qdp.min.js into your code where you need.
-*   Use the CDN in the head of your document: (e.g.: `<head><lots of other tags><script src="https://cdn.jsdelivr.net/npm/quickdetect@0.2.0/dist/qdp.min.js"></script></head>`)
+*   Use the CDN in the head of your document, e.g.: <pre>`<head>
+<lots of other tags>
+<script src="https://cdn.jsdelivr.net/npm/quickdetect@0.3.0/dist/qdp.min.js"></script>
+</head>`</pre>
 
-## API
+## API / Usage
 
 
-*   `QD.dev.mode`: False by default, setting the dev mode to 'true' (e.g. "QD.dev.mode = true") will console log any QD function you invoke. Remember to remove this before moving to production. The dist/qdp.min.js file is minified/uglified and does NOT include this functionality either way so it's best for production (or replace qd.min.js with qdp.min.js).
-*   `QD.browser`: Returns a string showing your browser marketname. Current possibilities are: "Safari", "Chrome", "Opera", "Firefox", "IE", "Edge", or "Unspecified".
-*   `QD.ori`: Returns a string describing your current aspect ratio / orientation. Current possibilities are: "Landscape", "Portrait", or "Square".
-*   `QD.IE.isBrowser`: Returns true/false about whether the user is on an IE browser (IE 8+).
+*   `QD.dev.mode`: False by default, setting the dev mode to 'true' will console log any QD function you invoke. Remember to remove this before moving to production. The dist/qdp.min.js file is minified/uglified and does NOT include this functionality either way so it's best for production. <pre>`<script>
+  QD.dev.mode = true;
+  QD.chrome.isBrowser(); =>  // In console: "QD DEV MESSAGE: Browser is Chrome".  Actual data returned:  true
+</script>`</pre>
+*   `QD.browser`: Returns a string showing your browser marketname. Current possibilities are: "Safari", "Chrome", "Opera", "Firefox", "IE", "Edge", or "Unspecified".<pre>`<script>
+  QD.browser(); =>  // Chrome
+</script>`</pre>
+*   `QD.ori`: Returns a string describing your current aspect ratio / orientation. Current possibilities are: "Landscape", "Portrait", or "Square".<pre>`<script>
+  QD.ori(); =>  // Landscape
+</script>`</pre>
+*   `QD.IE.isBrowser`: Returns true/false about whether the user is on an IE browser (IE 9+).<pre>`<script>
+  QD.IE.isBrowser(); =>  // false
+</script>`</pre>
+
+(You get the idea; not including samples of the rest)
 *   `QD.edge.isBrowser`: Returns true/false about whether the user is on an Edge browser.
 *   `QD.moz.isBrowser`: Returns true/false about whether the user is on a Mozilla/Firefox browser.
 *   `QD.chrome.isBrowser`: Returns true/false about whether the user is on a Chrome browser.
@@ -61,5 +78,9 @@ A few options (pick one):
 Below are user-agent dependent functions... I recommend designing responsively so as to mostly ignore the concerns of these, but these functions can still be useful for QA. 
 *   `QD.isMobile`: Returns true/false about whether the user is on a non-desktop browser (laptops are still desktops in this case).
 * 	`QD.mobDevice`: Returns a string describing your current mobile device type. Current possibilities are: "iPhone, "iPod", "iPad", "Android", "webOS", "BlackBerry", "IEMobile", "Opera Mini"... and "Desktop" if, for some reason, you've forgotten.
-* 	`QD.platform`: Returns a string describing your current OS platform. I haven't found a 'master list' of all the possiblities here.
-* 	`QD.version`: Returns a string describing the version of the browser you're using (long user-agent string).
+* 	`QD.platform`: Returns a string describing your current OS platform. I haven't found a 'master list' of all the possiblities here.<pre>`<script>
+QD.platform(); => // MacIntel
+</script>`</pre>
+* 	`QD.version`: Returns a string describing the version of the browser you're using (long user-agent string).<pre>`<script>
+QD.version(); => // 5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36
+</script>`</pre>
