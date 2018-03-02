@@ -6,7 +6,7 @@
 
 Current QD Status: **BETA** 
 
-[![Build Status](https://travis-ci.org/paul-HPA/quickdetect.svg?branch=master)](https://travis-ci.org/paul-HPA/quickdetect)
+[![Build Status](https://travis-ci.org/paul-HPA/quickdetect.svg?branch=master)](https://travis-ci.org/paul-HPA/quickdetect) [![Coverage Status](https://coveralls.io/repos/github/paul-HPA/quickdetect/badge.svg?branch=master)](https://coveralls.io/github/paul-HPA/quickdetect?branch=master)
 
 QD is a vanilla JS library that offers a small API for determining browser characteristics (using feature-detection where possible). 
 
