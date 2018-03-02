@@ -6,13 +6,13 @@
 
 Current QD Status: **BETA** 
 
-[![Build Status](https://travis-ci.org/paul-HPA/quickdetect.svg?branch=master)](https://travis-ci.org/paul-HPA/quickdetect) [![Coverage Status](https://coveralls.io/repos/github/paul-HPA/quickdetect/badge.svg?branch=master)](https://coveralls.io/github/paul-HPA/quickdetect?branch=master)
+[![Build Status](https://travis-ci.org/paul-HPA/quickdetect.svg?branch=master)](https://travis-ci.org/paul-HPA/quickdetect) [![Coverage Status](https://coveralls.io/repos/github/paul-HPA/quickdetect/badge.svg?branch=master)](https://coveralls.io/github/paul-HPA/quickdetect?branch=master) [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 QD is a vanilla JS library that offers a small API for determining browser characteristics (using feature-detection where possible). 
 
 Copied largely from the [Stack Overflow community](https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser), I was inspired to take the SO answers and create QD from my experiences with front-end development and figuring out what I actually use versus what's a bell-and-whistle that I don't really need (that said there a couple just-for-funs here like QD.isSquare and the logging functionality). 
 
-QD shouldn't conflict with third party libraries and is: [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+QD shouldn't conflict with third party libraries.  
 
 
 
@@ -66,7 +66,7 @@ const qd = require('quickdetect');
 ```html
 <head>
   <lots of other tags>
-  <script src="https://cdn.jsdelivr.net/npm/quickdetect@0.3.5/dist/qdp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quickdetect@0.4.0/dist/qdp.min.js"></script>
 </head>
 ```
 
@@ -108,3 +108,7 @@ QD.platform(); => // MacIntel
 ```javascript
 QD.version(); => // 5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36
 ```
+
+## Contributing
+
+I welcome contributors! The driving philosophy of QD is: Keep it light (3-4kb for production is my preferred ceiling right now) and try not to rely on User Agents.  If you're down for that, pull away.
