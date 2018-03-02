@@ -5,7 +5,7 @@
   "main": "./dist/qdp.min.js",
   "scripts": {
     "test": "jest --coverage",
-    "build": "jest && webpack"
+    "build": "jest --coverage && webpack"
   },
   "repository": {
     "type": "git",
