@@ -38,7 +38,7 @@ Tests have taken place on both Mac and PC hardware but don't take my word for it
 A few options (pick one):
 
 *   Install via npm: <pre>npm i quickdetect</pre>
-*   Add the dist/qd.min.js OR dist/qdp.min.js file to the head of your document, e.g.: <pre>`<head><lots of other tags><script src="path/to/qdp.min.js"></script></head>`</pre>
+*   Add the dist/qd.min.js OR dist/qdp.min.js file to the head of your document, e.g.: <pre>`<head>`<br />`<lots of other tags>`<br />`<script src="path/to/qdp.min.js"></script>`<br />`</head>`</pre>
 *   Copy and paste the code in dist/qd.min.js or dist/qdp.min.js into your code where you need.
 *   Use the CDN in the head of your document, e.g.: <pre>`<head><lots of other tags><script src="https://cdn.jsdelivr.net/npm/quickdetect@0.3.0/dist/qdp.min.js"></script></head>`</pre>
 
