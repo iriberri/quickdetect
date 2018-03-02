@@ -58,7 +58,7 @@ A few options (pick one):
 *   `QD.isLandscape`: Returns true/false about whether the user's aspect ratio is in landscape mode.
 *   `QD.isSquare`: Returns true/false about whether the user has an equal aspect ratio (for some reason).
 
-Below are user-agent dependent functions... I recommmend designing responsively so as to mostly ignore the concerns of these, but these functions can still be useful for QA. 
+Below are user-agent dependent functions... I recommend designing responsively so as to mostly ignore the concerns of these, but these functions can still be useful for QA. 
 *   `QD.isMobile`: Returns true/false about whether the user is on a non-desktop browser (laptops are still desktops in this case).
 * 	`QD.mobDevice`: Returns a string describing your current mobile device type. Current possibilities are: "iPhone, "iPod", "iPad", "Android", "webOS", "BlackBerry", "IEMobile", "Opera Mini"... and "Desktop" if, for some reason, you've forgotten.
 * 	`QD.platform`: Returns a string describing your current OS platform. I haven't found a 'master list' of all the possiblities here.
