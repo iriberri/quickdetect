@@ -1,8 +1,8 @@
 {
   "name": "quickdetect",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A small js utility lib that will detect common browser features quickly.",
-  "main": "quickdetect.js",
+  "main": "./dist/qdp.min.js",
   "scripts": {
     "test": "jest",
     "build": "jest && webpack"
