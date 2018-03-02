@@ -4,7 +4,7 @@
 	<img src="https://image.ibb.co/dL6xkx/qd_mascot.png">
 </p>
 
-Current QD Status: **BETA**
+Current QD Status: **BETA** [![Build Status](https://travis-ci.org/paul-HPA/quickdetect.svg?branch=master)](https://travis-ci.org/paul-HPA/quickdetect)
 
 QD is a vanilla JS library that offers a small API for determining browser characteristics (using feature-detection where possible). 
 
