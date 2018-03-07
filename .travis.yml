@@ -5,5 +5,5 @@ cache:
   directories:
     - "node_modules"
     
-install: npm install -d # make npm install explicit and verbose to see what's going on
+install: npm install
 after_script: "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
